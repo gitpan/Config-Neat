@@ -1,0 +1,66 @@
+{
+   "abstract" : "Parse/render human-readable configuration files with inheritance and schema validation",
+   "author" : [
+      "Igor Afanasyev <igor.afanasyev@gmail.com>"
+   ],
+   "dynamic_config" : 1,
+   "generated_by" : "Module::Build version 0.4205",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Config-Neat",
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "Test::More" : "0"
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "Module::Build" : "0"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Tie::IxHash" : "1.22"
+         }
+      }
+   },
+   "provides" : {
+      "Config::Neat" : {
+         "file" : "lib/Config/Neat.pm",
+         "version" : "0.3"
+      },
+      "Config::Neat::Array" : {
+         "file" : "lib/Config/Neat/Array.pm",
+         "version" : "0.3"
+      },
+      "Config::Neat::Inheritable" : {
+         "file" : "lib/Config/Neat/Inheritable.pm",
+         "version" : "0.3"
+      },
+      "Config::Neat::Render" : {
+         "file" : "lib/Config/Neat/Render.pm",
+         "version" : "0.3"
+      },
+      "Config::Neat::Schema" : {
+         "file" : "lib/Config/Neat/Schema.pm",
+         "version" : "0.3"
+      },
+      "Config::Neat::Util" : {
+         "file" : "lib/Config/Neat/Util.pm",
+         "version" : "0.3"
+      }
+   },
+   "release_status" : "testing",
+   "resources" : {
+      "license" : [
+         "http://dev.perl.org/licenses/"
+      ]
+   },
+   "version" : "0.3"
+}
