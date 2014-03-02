@@ -5,6 +5,7 @@ WriteMakefile
   'NAME' => 'Config::Neat',
   'VERSION_FROM' => 'lib/Config/Neat.pm',
   'PREREQ_PM' => {
+                   'File::Slurp' => 0,
                    'Test::More' => 0,
                    'Tie::IxHash' => '1.22'
                  },
