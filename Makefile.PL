@@ -6,7 +6,7 @@ WriteMakefile
   'VERSION_FROM' => 'lib/Config/Neat.pm',
   'PREREQ_PM' => {
                    'File::Slurp' => 0,
-                   'Test::More' => 0,
+                   'Test::More' => '0.94',
                    'Tie::IxHash' => '1.22'
                  },
   'INSTALLDIRS' => 'site',

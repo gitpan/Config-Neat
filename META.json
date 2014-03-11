@@ -17,7 +17,7 @@
       "build" : {
          "requires" : {
             "File::Slurp" : "0",
-            "Test::More" : "0"
+            "Test::More" : "0.94"
          }
       },
       "configure" : {
@@ -34,27 +34,27 @@
    "provides" : {
       "Config::Neat" : {
          "file" : "lib/Config/Neat.pm",
-         "version" : "0.5"
+         "version" : "0.6"
       },
       "Config::Neat::Array" : {
          "file" : "lib/Config/Neat/Array.pm",
-         "version" : "0.5"
+         "version" : "0.6"
       },
       "Config::Neat::Inheritable" : {
          "file" : "lib/Config/Neat/Inheritable.pm",
-         "version" : "0.5"
+         "version" : "0.6"
       },
       "Config::Neat::Render" : {
          "file" : "lib/Config/Neat/Render.pm",
-         "version" : "0.5"
+         "version" : "0.6"
       },
       "Config::Neat::Schema" : {
          "file" : "lib/Config/Neat/Schema.pm",
-         "version" : "0.5"
+         "version" : "0.6"
       },
       "Config::Neat::Util" : {
          "file" : "lib/Config/Neat/Util.pm",
-         "version" : "0.5"
+         "version" : "0.6"
       }
    },
    "release_status" : "stable",
@@ -63,5 +63,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.5"
+   "version" : "0.6"
 }
