@@ -1,6 +1,16 @@
 Revision history for Config-Neat
 
-For the upcoming release
+0.7     11 April 2014
+
+        - Automatically convert merged node to an IxHash
+          if necessary
+
+        - Allow casting any hash to an array
+
+        - Support rendering default hash values
+
+        - Do not count the key length for the hash keys
+          that don't have values
 
 0.6     12 March 2014
 
