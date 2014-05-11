@@ -1,5 +1,9 @@
 Revision history for Config-Neat
 
+0.9     11 May 2014
+
+        - Implemented proper cascaded inheritance
+
 0.8     10 May 2014
 
         - Fix inheriting the same local paths from different files
