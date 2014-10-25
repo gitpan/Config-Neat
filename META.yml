@@ -17,24 +17,24 @@ name: Config-Neat
 provides:
   Config::Neat:
     file: lib/Config/Neat.pm
-    version: '1.0'
+    version: '1.1'
   Config::Neat::Array:
     file: lib/Config/Neat/Array.pm
-    version: '1.0'
+    version: '1.1'
   Config::Neat::Inheritable:
     file: lib/Config/Neat/Inheritable.pm
-    version: '1.0'
+    version: '1.1'
   Config::Neat::Render:
     file: lib/Config/Neat/Render.pm
-    version: '1.0'
+    version: '1.1'
   Config::Neat::Schema:
     file: lib/Config/Neat/Schema.pm
-    version: '1.0'
+    version: '1.1'
   Config::Neat::Util:
     file: lib/Config/Neat/Util.pm
-    version: '1.0'
+    version: '1.1'
 requires:
   Tie::IxHash: '1.22'
 resources:
   license: http://dev.perl.org/licenses/
-version: '1.0'
+version: '1.1'
