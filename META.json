@@ -4,7 +4,7 @@
       "Igor Afanasyev <igor.afanasyev@gmail.com>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "Module::Build version 0.4205",
+   "generated_by" : "Module::Build version 0.421",
    "license" : [
       "perl_5"
    ],
@@ -16,7 +16,7 @@
    "prereqs" : {
       "build" : {
          "requires" : {
-            "File::Slurp" : "0",
+            "File::Slurp::Tiny" : "0",
             "Test::More" : "0.94"
          }
       },
@@ -34,27 +34,27 @@
    "provides" : {
       "Config::Neat" : {
          "file" : "lib/Config/Neat.pm",
-         "version" : "0.9"
+         "version" : "1.0"
       },
       "Config::Neat::Array" : {
          "file" : "lib/Config/Neat/Array.pm",
-         "version" : "0.9"
+         "version" : "1.0"
       },
       "Config::Neat::Inheritable" : {
          "file" : "lib/Config/Neat/Inheritable.pm",
-         "version" : "0.9"
+         "version" : "1.0"
       },
       "Config::Neat::Render" : {
          "file" : "lib/Config/Neat/Render.pm",
-         "version" : "0.9"
+         "version" : "1.0"
       },
       "Config::Neat::Schema" : {
          "file" : "lib/Config/Neat/Schema.pm",
-         "version" : "0.9"
+         "version" : "1.0"
       },
       "Config::Neat::Util" : {
          "file" : "lib/Config/Neat/Util.pm",
-         "version" : "0.9"
+         "version" : "1.0"
       }
    },
    "release_status" : "stable",
@@ -63,5 +63,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.9"
+   "version" : "1.0"
 }
