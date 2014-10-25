@@ -71,7 +71,7 @@ L<https://github.com/iafan/Config-Neat>
 
 package Config::Neat;
 
-our $VERSION = '1.1';
+our $VERSION = '1.101';
 
 use strict;
 
@@ -104,10 +104,9 @@ sub new {
 sub parse {
     my ($self, $nconf) = @_;
 
-    my $new = new_ixhash;
-
     my $o = {
-        context            => [$new],
+        context            => [new_ixhash],
+        context_data       => [{}],
         c                  => undef,
 
         pos                => 0,
@@ -121,7 +120,6 @@ sub parse {
         was_slash          => undef,
         was_asterisk       => undef,
         first_value_pos    => 0,
-        converted_to_array => undef,
     };
 
     my $in_raw_mode     = undef;
@@ -133,11 +131,12 @@ sub parse {
         if ($o->{key} ne '') {
             push @{$o->{values}}, 'YES' if !$no_default_param && scalar(@{$o->{values}}) == 0;
             my $current_ctx = $o->{context}->[$#{$o->{context}}];
+            my $data = $o->{context_data}->[$#{$o->{context_data}}];
             if (exists $current_ctx->{$o->{key}}) {
-                $o->{converted_to_array} = {} unless exists $o->{converted_to_array};
-                if (!$o->{converted_to_array}->{$o->{key}}) {
+                $data->{is_array} = {} unless exists $data->{is_array};
+                if (!$data->{is_array}->{$o->{key}}) {
                     $current_ctx->{$o->{key}} = Config::Neat::Array->new([$current_ctx->{$o->{key}}]);
-                    $o->{converted_to_array}->{$o->{key}} = 1;
+                    $data->{is_array}->{$o->{key}} = 1;
                 }
                 $current_ctx->{$o->{key}}->push($o->{values});
             } else {
@@ -237,6 +236,7 @@ sub parse {
             $o->{first_value_pos} = 0;
 
             push @{$o->{context}}, $new_context;
+            push @{$o->{context_data}}, {};
 
             # any values preceding the block will be added into it with an empty key value
             if (scalar(@{$old_values}) > 0) {
@@ -258,6 +258,7 @@ sub parse {
                 die "Unmatched closing bracket at config line $line position $o->{pos}";
             }
             pop @{$o->{context}};
+            pop @{$o->{context_data}};
             $o->{mode} = $WHITESPACE;
             $o->{key} = '';
             $o->{values} = Config::Neat::Array->new();
